@@ -5,4 +5,6 @@
     <color name="colorAccent">#FFC400</color>
     <color name="colorLigth">#56FFFFFF</color>
     <color name="colorLigthPrimary">#80F177A2</color>
+    <color name="colorTranspery">#00FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

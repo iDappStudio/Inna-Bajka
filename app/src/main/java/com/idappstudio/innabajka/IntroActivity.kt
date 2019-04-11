@@ -1,16 +1,19 @@
 package com.idappstudio.innabajka
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import com.google.firebase.FirebaseApp
 
-class MainActivity : AppCompatActivity() {
+class IntroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
+
+        FirebaseApp.initializeApp(this)
 
         Handler().postDelayed({
 

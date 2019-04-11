@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="wrap_content"
-                                                   android:id="@+id/constraintLayout"
->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="80dp"
+             android:background="@color/colorTranspery">
 
-    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
-                                                       android:layout_height="80dp"
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
                                                        app:layout_constraintStart_toStartOf="parent"
-                                                       android:layout_marginStart="20dp" android:layout_marginTop="4dp"
                                                        app:layout_constraintTop_toTopOf="parent"
                                                        app:layout_constraintEnd_toEndOf="parent"
+                                                       android:background="@color/colorTranspery"
                                                        app:layout_constraintBottom_toBottomOf="parent"
                                                        app:layout_constraintVertical_bias="0.0"
-                                                       android:layout_marginEnd="20dp" android:layout_marginBottom="4dp">
+    >
 
         <com.comix.rounded.RoundedCornerImageView
                 android:id="@+id/obrazek"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cornerRadius="4dp"
+                android:background="@color/colorTranspery"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -48,18 +47,18 @@
             <TextView
                     android:text="sernik czekoladowy"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView4" android:textAlignment="center"
+                    android:layout_height="wrap_content" android:id="@+id/tytul" android:textAlignment="center"
                     android:textAllCaps="true" android:textStyle="bold" android:textColor="@android:color/white"
                     android:textSize="18sp"/>
 
             <TextView
                     android:text="2.99 zł • 1 szt."
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView5" android:textAlignment="center"
+                    android:layout_height="wrap_content" android:id="@+id/podtytul" android:textAlignment="center"
                     android:textAllCaps="false" android:textColor="@android:color/white"/>
 
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
