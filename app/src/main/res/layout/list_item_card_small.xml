@@ -13,23 +13,25 @@
                                                    android:layout_marginStart="20dp" android:layout_marginBottom="8dp"
                                                    android:layout_marginTop="8dp">
 
-    <ImageView
-            android:id="@+id/obrazek"
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/obrazek2"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTranspery"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="centerCrop"
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
-            android:scaleType="centerCrop" android:background="@color/colorTranspery"/>
+            android:src="@mipmap/backgroundcard"/>
 
     <View
             android:layout_width="wrap_content"
             android:layout_height="0dp" android:id="@+id/view4"
             android:background="@drawable/background_corners"
-            app:layout_constraintStart_toStartOf="@+id/obrazek"
-            app:layout_constraintTop_toTopOf="@+id/obrazek" app:layout_constraintEnd_toEndOf="@+id/obrazek"
+            app:layout_constraintStart_toStartOf="@+id/obrazek2"
+            app:layout_constraintTop_toTopOf="@+id/obrazek2" app:layout_constraintEnd_toEndOf="@+id/obrazek2"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     <LinearLayout

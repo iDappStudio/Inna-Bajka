@@ -27,4 +27,13 @@ class GalleryActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this, NavigationActivity::class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
 }

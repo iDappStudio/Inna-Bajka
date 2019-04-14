@@ -2,15 +2,18 @@ package com.idappstudio.innabajka.menu
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_menu.*
 import androidx.viewpager.widget.ViewPager
-import android.view.View
 import com.google.firebase.firestore.FirebaseFirestore
 import com.idappstudio.innabajka.NavigationActivity
 import com.idappstudio.innabajka.R
+import com.idappstudio.innabajka.interfaces.Loading
 import com.idappstudio.innabajka.menu.fragments.MenuFragment
+import android.widget.ProgressBar
+
 
 class MenuActivity : AppCompatActivity() {
 
@@ -27,6 +30,8 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        loadingVar = loading
 
         setSupportActionBar(toolbar)
 
@@ -83,14 +88,18 @@ class MenuActivity : AppCompatActivity() {
 
                     list.forEach { it2 ->
 
-                        adapter.addFragment(MenuFragment(it2), it2)
+                        val args = Bundle()
+                        args.putString("category", it2)
+
+                        val fragment = MenuFragment()
+                        fragment.arguments = args
+
+                        adapter.addFragment(fragment, it2)
 
                         if(adapter.count == list.size){
 
                             viewPager.adapter = adapter
                             setupTabIcons(list.size)
-
-                            loading.visibility = View.GONE
 
                         }
 
@@ -128,7 +137,17 @@ class MenuActivity : AppCompatActivity() {
     }
 
     companion object {
+
         val mFragmentTitleList: ArrayList<String> = ArrayList()
+
+        lateinit var loadingVar: ProgressBar
+
+        fun goneLoading(){
+
+            loadingVar.visibility = View.GONE
+
+        }
+
     }
 
     override fun onBackPressed() {

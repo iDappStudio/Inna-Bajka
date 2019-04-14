@@ -202,4 +202,13 @@ class LocationActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMyL
         return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this, NavigationActivity::class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
 }

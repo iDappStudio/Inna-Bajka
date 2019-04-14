@@ -17,7 +17,7 @@
                                                        android:layout_marginEnd="20dp" android:layout_marginBottom="4dp">
 
         <com.comix.rounded.RoundedCornerImageView
-                android:id="@+id/obrazek"
+                android:id="@+id/obrazek2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cornerRadius="4dp"
@@ -32,8 +32,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/view4"
                 android:background="@drawable/background_corners"
-                app:layout_constraintStart_toStartOf="@+id/obrazek"
-                app:layout_constraintTop_toTopOf="@+id/obrazek" app:layout_constraintEnd_toEndOf="@+id/obrazek"
+                app:layout_constraintStart_toStartOf="@+id/obrazek2"
+                app:layout_constraintTop_toTopOf="@+id/obrazek2" app:layout_constraintEnd_toEndOf="@+id/obrazek2"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         <LinearLayout

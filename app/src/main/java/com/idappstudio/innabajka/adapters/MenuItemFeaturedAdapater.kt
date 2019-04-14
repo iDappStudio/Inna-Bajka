@@ -6,9 +6,9 @@ import com.idappstudio.innabajka.model.MenuItem
 import com.idappstudio.innabajka.utils.GlideUtil
 import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
-import kotlinx.android.synthetic.main.list_item_card_small.*
+import kotlinx.android.synthetic.main.list_item_card_big.*
 
-class MenuItemAdapater(private val item: MenuItem, private val context: Context) : Item() {
+class MenuItemFeaturedAdapater(private val item: MenuItem, private val context: Context) : Item() {
 
     override fun bind(holder: ViewHolder, position: Int) {
 
@@ -16,10 +16,12 @@ class MenuItemAdapater(private val item: MenuItem, private val context: Context)
 
         holder.podtytul.text = "${item.cena} zł • ${item.ilosc} ${item.miara}"
 
-        GlideUtil.setImage(holder.obrazek2, context, item.obrazek)
+        holder.opis.text = item.opis
+
+        GlideUtil.setImage(holder.obrazek, context, item.obrazek)
 
     }
 
-    override fun getLayout(): Int = R.layout.list_item_card_small
+    override fun getLayout(): Int = R.layout.list_item_card_big
 
 }
