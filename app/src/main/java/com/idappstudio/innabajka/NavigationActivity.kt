@@ -93,6 +93,22 @@ class NavigationActivity : AppCompatActivity() {
 
         }
 
+        btnGallery.setOnClickListener {
+
+            val intent = Intent(this, GalleryActivity::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+        btnLocation.setOnClickListener {
+
+            val intent = Intent(this, LocationActivity::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
         button.setOnClickListener {
 
             alertDialog.show()

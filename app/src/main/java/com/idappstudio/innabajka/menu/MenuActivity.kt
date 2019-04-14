@@ -61,6 +61,8 @@ class MenuActivity : AppCompatActivity() {
 
     private fun setupTabIcons(size: Int) {
 
+        viewpager.offscreenPageLimit = size
+
         for(i in 0..size) {
             tabs.getTabAt(i)?.setIcon(tabIcons[i])
         }

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
@@ -16,6 +17,7 @@ android {
         applicationId "com.idappstudio.innabajka"
         minSdkVersion 22
         targetSdkVersion 28
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -40,25 +42,29 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0-alpha03'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha03'
 
-    //Google Pay
+    //Google
     implementation 'com.google.android.gms:play-services-wallet:16.0.1'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
 
     //Github
     implementation 'com.fujiyuu75:sequent:0.2.1'
     implementation 'com.github.zjywill:roundedcornerimageview:1.1.0'
     implementation 'com.github.ybq:Android-SpinKit:1.2.0'
     implementation 'com.xwray:groupie:2.3.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.xwray:groupie-kotlin-android-extensions:2.3.0'
-
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
 
     //Firebase
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation 'com.google.firebase:firebase-firestore:18.2.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
 }
 
