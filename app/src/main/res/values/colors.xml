@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#F177A2</color>
-    <color name="colorPrimaryDark">#F177A2</color>
+    <color name="colorPrimaryDark">#bc4674</color>
+    <color name="colorError">#BC4646</color>
+    <color name="colorCorrect">#4ABC46</color>
     <color name="colorAccent">#FFC400</color>
     <color name="colorLigth">#56FFFFFF</color>
     <color name="colorGradientStart">#BE2C2C2C</color>
@@ -9,4 +12,10 @@
     <color name="colorGradientEnd">#80FFC400</color>
     <color name="colorTranspery">#00FFFFFF</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLigth2">#A6FFFFFF</color>
+    <color name="colorText">#DE000000</color>
+    <color name="colorLabel">#99000000</color>
+    <color name="colorContainer">#1F000000</color>
+    <color name="colorPrimaryDarker">#7B2D4C</color>
+
 </resources>

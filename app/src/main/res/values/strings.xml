@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">Inna Bajka</string>
     <string name="map_api" translatable="false">AIzaSyD3k4-0DdeLn6VtW_sxhbokbyoPQmNb14Y</string>
+
+    <!--DotPay-->
+    <string name="change_channel">Kliknij, aby zmienić metodę</string>
+
 </resources>

@@ -10,10 +10,11 @@ import androidx.viewpager.widget.ViewPager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.idappstudio.innabajka.NavigationActivity
 import com.idappstudio.innabajka.R
-import com.idappstudio.innabajka.interfaces.Loading
 import com.idappstudio.innabajka.menu.fragments.MenuFragment
 import android.widget.ProgressBar
-
+import com.ravikoradiya.library.CenterTitle
+import kotlinx.android.synthetic.main.activity_menu.loading
+import kotlinx.android.synthetic.main.activity_menu.toolbar
 
 class MenuActivity : AppCompatActivity() {
 
@@ -30,10 +31,13 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+        setSupportActionBar(toolbar)
+
+        CenterTitle.centerTitle(toolbar,true)
+
+        toolbar.setTitleTextAppearance(this, R.style.TitleToolBar)
 
         loadingVar = loading
-
-        setSupportActionBar(toolbar)
 
         toolbar.setNavigationIcon(R.drawable.ic_round_menu_24px)
         toolbar.setNavigationOnClickListener {

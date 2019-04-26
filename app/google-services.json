@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "900284038916",
+    "firebase_url": "https://inna-bajka-mikolow.firebaseio.com",
+    "project_id": "inna-bajka-mikolow",
+    "storage_bucket": "inna-bajka-mikolow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900284038916:android:66cb18b1c230a862",
+        "android_client_info": {
+          "package_name": "com.idappstudio.innabajka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900284038916-dkis0lp52hp442nf6mpphtfapo9jfl13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.idappstudio.innabajka",
+            "certificate_hash": "0c88bab4046955a6109724d3ea9eb0c9f3d6fa4d"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3k4-0DdeLn6VtW_sxhbokbyoPQmNb14Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900284038916-bdgetgjjfag6pcdqcietj8h4d0bhllin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

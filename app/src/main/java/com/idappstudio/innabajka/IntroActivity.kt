@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import com.google.firebase.FirebaseApp
+import pl.mobiltek.paymentsmobile.dotpay.AppSDK
 
 class IntroActivity : AppCompatActivity() {
 
@@ -14,6 +15,7 @@ class IntroActivity : AppCompatActivity() {
         setContentView(R.layout.activity_intro)
 
         FirebaseApp.initializeApp(this)
+        AppSDK.initialize(this)
 
         Handler().postDelayed({
 

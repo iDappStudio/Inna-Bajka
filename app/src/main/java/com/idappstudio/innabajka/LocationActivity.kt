@@ -7,15 +7,12 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Canvas
-import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.location.Location
 import android.net.Uri
 import android.os.Bundle
-import android.util.DisplayMetrics
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import kotlinx.android.synthetic.main.activity_location.*
@@ -23,20 +20,19 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import androidx.fragment.app.FragmentActivity
 import com.google.android.gms.maps.SupportMapFragment
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.RadioGroup
-import androidx.annotation.DrawableRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.model.*
 import com.google.android.gms.maps.model.MarkerOptions
 import com.idappstudio.innabajka.adapters.CustomInfoWindowAdapter
+import com.ravikoradiya.library.CenterTitle
 
-class LocationActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMyLocationClickListener {
+class LocationActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMyLocationClickListener {
 
     override fun onMyLocationButtonClick(): Boolean {
         return true
@@ -53,6 +49,13 @@ class LocationActivity : FragmentActivity(), OnMapReadyCallback, GoogleMap.OnMyL
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location)
+        setSupportActionBar(toolbar)
+
+        CenterTitle.centerTitle(toolbar,true)
+
+        toolbar.setTitleTextAppearance(this, R.style.TitleToolBar)
+
+        toolbar.setNavigationIcon(R.drawable.ic_round_menu_24px)
 
         toolbar.setNavigationIcon(R.drawable.ic_round_menu_24px)
         toolbar.title = "Lokalizacja"
